@@ -7,11 +7,13 @@ import EditTur from "./Components/EditTur/EditTur";
 import TurView from "./Components/TurCard/TurView/TurView";
 import Basket from "./Components/Basket/Basket";
 import AddOrder from "./Components/AddOrder/AddOrder";
+import AboutUs from "./Components/AboutUs/AboutUs";
 
 const MainRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<AboutUs />} />
 
       {/* tur crud */}
   

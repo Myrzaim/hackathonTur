@@ -5,7 +5,8 @@ import "./AddTur.css"
 
 
 const AddTur = () => {
-    const { addTur } = useContext(turContext);
+  const { addTur } = useContext(turContext);
+  const [continent, setContinent] = useState("");
     const [country, setCountry] = useState("");
     const [city, setCity] = useState("");
     const [desc, setDesc] = useState("");
@@ -15,7 +16,8 @@ const AddTur = () => {
 
     function handleAdd(e) {
         e.preventDefault(); 
-        if (
+      if (
+            !continent.trim() ||
             !country.trim() ||
             !city.trim() ||
             !desc.trim() ||
@@ -23,7 +25,8 @@ const AddTur = () => {
             !img.trim()
         )
             alert("Заполните все поля!");
-        let obj = {
+      let obj = {
+            continent,
             country,
             city,
             desc,
@@ -31,6 +34,7 @@ const AddTur = () => {
             img
         }
         addTur(obj);
+        setContinent("");
         setCountry("");
         setCity("");
         setDesc("");
@@ -40,8 +44,15 @@ const AddTur = () => {
 
     return (
         <>
-          <h2 id="add-title">Добавление товара</h2>
-          <form id="form-add"  onSubmit={(e) => handleAdd(e)}>
+          <h2 id="add-title">Добавление тура</h2>
+        <form id="form-add" onSubmit={(e) => handleAdd(e)}>
+         <TextField
+              className="outlined-basic"
+              label="Континент"
+              variant="outlined"
+              value={continent}
+              onChange={(e) => setContinent(e.target.value)}
+                />
             <TextField
               className="outlined-basic"
               label="Страна"

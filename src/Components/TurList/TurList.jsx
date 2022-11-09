@@ -21,10 +21,10 @@ const TurList = () => {
  
   const [paramsSearch, setParamsSearch] = useSearchParams();
 
-  const [country, setCountry] = useState("all");
+  const [continent, setContinent] = useState("all");
     const [page, setPage] = useState(1);
     useEffect(() => {
-      if (country === "all") {
+      if (continent === "all") {
         setParamsSearch({
           q: paramsSearch.get("q") || "", // null || ""
           _page: page,
@@ -32,12 +32,12 @@ const TurList = () => {
         });
       } else {
         setParamsSearch({
-          country:country ,
+          continent:continent,
           _page: page,
           _limit: 3,
         });
       }
-    }, [paramsSearch, country, page]);
+    }, [paramsSearch, continent, page]);
 
     useEffect(() => {
         readTur();
@@ -53,12 +53,12 @@ const TurList = () => {
           justifyContent:"flex-end"
           }}>
             <Filter
-              country={country}
-            setCountry={setCountry} />
+              continent={continent}
+            setContinent={setContinent} />
           <Box style={{width:'1%'}} />
           <Link to='/add' >
             
-        <Button className='AddBtn' variant="contained" startIcon={<AddIcon />}>
+        <Button style={{borderRadius: "5px"}} className='AddBtn' variant="contained" startIcon={<AddIcon />}>
             Добавить
         </Button>
         </Link>

@@ -35,24 +35,26 @@ const Basket = () => {
     return (
       <>
         <Container maxWidth="lg">
-          <Typography variant="h3">My Basket</Typography>
+          <Typography variant="h3">Mои Заказы</Typography>
           {tursInBasket ? (
             <>
               <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 650 }}>
                   <TableHead>
                     <TableRow>
-                      <TableCell sx={{ fontWeight: "bold" }}>Country</TableCell>
-                    <TableCell sx={{ fontWeight: "bold" }}>City</TableCell>
-                    <TableCell sx={{ fontWeight: "bold" }}>Img</TableCell>
-                      <TableCell sx={{ fontWeight: "bold" }}>Price</TableCell>
-                      <TableCell sx={{ fontWeight: "bold" }}>Count</TableCell>
-                      <TableCell sx={{ fontWeight: "bold" }}>SubPrice</TableCell>
+                    <TableCell sx={{ fontWeight: "bold" }}>Континент</TableCell>
+                      <TableCell sx={{ fontWeight: "bold" }}>Страна</TableCell>
+                    <TableCell sx={{ fontWeight: "bold" }}>Город</TableCell>
+                    <TableCell sx={{ fontWeight: "bold" }}>Фото</TableCell>
+                      <TableCell sx={{ fontWeight: "bold" }}>Цена</TableCell>
+                      <TableCell sx={{ fontWeight: "bold" }}>Кол-во</TableCell>
+                      <TableCell sx={{ fontWeight: "bold" }}>Общая сумма</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
                     {tursInBasket.turs.map((elem) => (
                       <TableRow key={elem.item.id}>
+                        <TableCell>{elem.item.continent}</TableCell>
                         <TableCell>{elem.item.country}</TableCell>
                         <TableCell>{elem.item.city}</TableCell>
                         <TableCell>
@@ -66,7 +68,7 @@ const Basket = () => {
                             style={{ width: "40px" }}
                             value={elem.count}
                             onChange={(e) =>
-                              changeTurCount(elem.item.id, e.target.value)
+                              changeTurCount(elem.item.id, Number(e.target.value))
                             }
                           />
                         </TableCell>
@@ -82,7 +84,7 @@ const Basket = () => {
                 </Table>
               </TableContainer>
               <Button variant="contained" sx={{ margin: "20px auto" }}>
-                Цена {tursInBasket.totalPrice}
+                Цена {Number(tursInBasket.totalPrice)}
                         </Button>
                 <Button variant="contained" sx={{ margin: "20px auto 20px 25px" }}
                   onClick={() => navigate(`/addorder/${tursInBasket.totalPrice}`)}>

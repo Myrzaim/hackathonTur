@@ -109,7 +109,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
    const customTheme = createTheme({
     palette: {
       primary: {
-        main: '#C2C6D2',
+        main: '#4C4F50',
       },
       secondary: {
         main: '#00fff0', // very cyan
@@ -134,37 +134,35 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
-      <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
+       <MenuItem>
+          <Link to="/">
+            <Typography className='link-text titlr_name' >
+             Traveline
+            </Typography>
+          </Link>
+       
       </MenuItem>
       <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit"
-        >
-          <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <p>Notifications</p>
+          <Link to="/about">
+            <Typography className='link-text titlr_name' >
+             О нас
+            </Typography>
+          </Link>
+       
       </MenuItem>
-      <MenuItem onClick={handleProfileMenuOpen}>
-        <IconButton
-          size="large"
-          aria-label="account of current user"
-          aria-controls="primary-search-account-menu"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
-        </IconButton>
-        <p>Profile</p>
+      <MenuItem>
+        <Link to="/list">
+            <Typography className='link-text titlr_name' >
+             Туры
+            </Typography>
+        </Link>
+      </MenuItem>
+      <MenuItem>
+      <Link to="/basket">
+        <Typography className='link-text titlr_name' >
+             Корзина
+          </Typography>
+          </Link>
       </MenuItem>
     </Menu>
   );
@@ -174,7 +172,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
       <AppBar theme={customTheme} position="static" color='primary'  >
         <Toolbar>
           <Link to={'/'}>
-            <Typography className='link-text titlr_name'
+            <Typography className='link-text titlr_name' style={{ color: 'white'}}
             variant="h4"
             noWrap
             component="div"
@@ -184,17 +182,19 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
           </Link>
           <SearchTur/>
           <Box sx={{ flexGrow: 1 }} />
-          <Typography className='titlr_name'
+          <Link to="/about">
+          <Typography className='titlr_name' style={{ color: 'white' }}
             variant="h6"
             noWrap
             component="div"
             sx={{ display: { xs: 'none', sm: 'block' }}}
           >
             О нас
-          </Typography>
+            </Typography>
+            </Link>
           <Box sx={{ flexGrow: 0.2}} />
           <Link to="/list">
-            <Typography className='link-text titlr_name'
+            <Typography className='link-text titlr_name' style={{ color: 'white' }}
               variant="h6"
               noWrap
               component="div"
@@ -205,7 +205,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
           <Box sx={{ flexGrow: 0.2 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
             <Link to={'/basket'}>
-            <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+            <IconButton size="large" aria-label="show 4 new mails" style={{ color: 'white' }}>
               <Badge badgeContent={basketCount} color="error">
                 <AddShoppingCartIcon />
               </Badge>

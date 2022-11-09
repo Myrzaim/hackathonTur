@@ -72,7 +72,7 @@ const AddOrder = () => {
         <>
           <h2 id="add-title">Оформления тура</h2>
             <form id="form-add" onSubmit={(e) => handleAdd(e)}>
-                <Button variant="contained" color="success">Общая сумма тура: { price}</Button>
+          <Button variant="outlined" color="primary" style={{ fontWeight: "bold"}}>Общая сумма тура: { price}</Button>
             <TextField
               className="outlined-basic"
               label="Имя"
@@ -114,12 +114,12 @@ const AddOrder = () => {
                 >
                 <Box sx={style}>
                     <Typography id="modal-modal-title" variant="h6" component="h2">
-                    Text in a modal
+                    Вы успешно оформились!
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                    Наши специалисты свяжутся с Вами в ближайшее время!
                     </Typography>
-                    <Button onClick={()=> {navigate(`/`)}}>OK</Button>
+                    <Button onClick={()=> {navigate(`/`)}}>ок</Button>
                 </Box>
             </Modal>
         </>

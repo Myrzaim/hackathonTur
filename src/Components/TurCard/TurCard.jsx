@@ -22,7 +22,7 @@ const TurCard = ({ obj }) => {
   const navigate = useNavigate();
   let desc = obj.desc.toString().substring(0, 130)+'...';
     return (
-        <Card sx={{ maxWidth: 345 }} style={{height:400}}>
+        <Card sx={{ maxWidth: 345 }} style={{ height:420, borderRadius: "6%"}}>
         <CardMedia
           component="img"
           alt="green iguana"
@@ -32,11 +32,14 @@ const TurCard = ({ obj }) => {
         <CardContent>
           <Grid sx={{ display: "flex", justifyContent: "space-between" }}>
             <Grid>
+            <Typography gutterBottom variant="h5" component="div">
+            {obj.continent}
+          </Typography>
           <Typography gutterBottom variant="h5" component="div">
-            {obj.city}
+            {obj.country}
           </Typography>
           <Typography gutterBottom variant="h6" component="div">
-          {obj.country}
+          {obj.city}
               </Typography>
               </Grid>
           <Button startIcon={<AttachMoneyIcon />} size ="large">

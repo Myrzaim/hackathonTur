@@ -1,51 +1,40 @@
 {
   "turs": [
     {
-      "country": "Singapore",
-      "city": "Singapore ",
-      "desc": "loremi[dlksfglkjsdhgfjs hsdjklghkjsdng jsdbgjklh asjfajksdfh ajshfd jasndfj asjdkf najskdfn jasdfn ajsdfna jskfnajsndf kjasnfd asjndfl kjsndf",
-      "price": "1997",
-      "img": "https://www.nationsonline.org/gallery/Singapore/Marina-Bay_Singapore_Firework.jpg",
+      "continent": "Европа",
+      "country": "Германия",
+      "city": "Берлин",
+      "desc": "Берлин – столица Германии, история которой восходит к XIII в. О непростой истории города в XX в. напоминают Мемориал жертвам Холокоста и граффити на руинах Берлинской стены. Бранденбургские ворота, возведенные в XVIII в., известны как символ воссоединения Берлина, разделенного во время Холодной войны на две части. ",
+      "price": "500",
+      "img": "https://cdn2.tu-tu.ru/image/pagetree_node_data/1/d17ea426ac12fac7c75ace752415a72a/",
       "id": 1
     },
     {
-      "country": "Германия",
-      "city": "Берлин",
-      "desc": "Бишкек – это столица Кыргызстана, расположенная у подножия гор Тянь-Шань в Центральной Азии. Отсюда можно добраться до горных хребтов Ала-Тоо и национального парка Ала-Арча, ",
-      "price": "900",
-      "img": "https://tripplanet.ru/wp-content/uploads/asia/kyrgyzstan/bishkek/dostoprimechatelnosti-bishkeka.jpg",
+      "continent": "Америка",
+      "country": "США",
+      "city": "Нью-Йорк",
+      "desc": "Нью-Йорк включает пять боро (районов), расположенных в месте впадения реки Гудзон в Атлантический океан. В центре города расположен густонаселенный Манхэттен – один из крупнейших в мире коммерческих, финансовых и культурных центров.",
+      "price": "1000",
+      "img": "http://afisha.nyc/wp-content/uploads/2018/04/1493907885_ozbeoz-com-new-york-1.jpg",
       "id": 2
-    },
-    {
-      "country": "Singapore",
-      "city": "Singapore ",
-      "desc": "loremi[dlksfglkjsdhgfjs hsdjklghkjsdng jsdbgjklh asjfajksdfh ajshfd jasndfj asjdkf najskdfn jasdfn ajsdfna jskfnajsndf kjasnfd asjndfl kjsndf",
-      "price": "1997",
-      "img": "https://www.nationsonline.org/gallery/Singapore/Marina-Bay_Singapore_Firework.jpg",
-      "id": 3
-    },
-    {
-      "country": "Германия",
-      "city": "Берлин",
-      "desc": "Бишкек – это столица Кыргызстана, расположенная у подножия гор Тянь-Шань в Центральной Азии. Отсюда можно добраться до горных хребтов Ала-Тоо и национального парка Ала-Арча, ",
-      "price": "900",
-      "img": "https://tripplanet.ru/wp-content/uploads/asia/kyrgyzstan/bishkek/dostoprimechatelnosti-bishkeka.jpg",
-      "id": 4
-    },
-    {
-      "country": "Россия",
-      "city": "Москва",
-      "desc": "Москва – столица России, многонациональный город на Москве-реке в западной части страны. В его историческом центре находится средневековая крепость Кремль – резиденция российского президента. На ее территории можно посетить Оружейную палату, где выставляются драгоценные предметы, принадлежавшие царской семье. ",
-      "price": "100",
-      "img": "https://traveller-eu.ru/sites/default/files/styles/main_img/public/moscow-3550477_1280_0.webp?itok=76uewcES",
-      "id": 7
     }
   ],
-  "orders": {
-    "name": "цуке",
-    "surname": "цуке",
-    "phone": "цукен",
-    "adres": "укен",
-    "price": "0900"
-  }
+  "orders": [
+    {
+      "name": "фыв",
+      "surname": "фывап",
+      "phone": "ывап",
+      "adres": "ывап",
+      "price": "01000",
+      "id": 1
+    },
+    {
+      "name": "вап",
+      "surname": "мапи",
+      "phone": "вап",
+      "adres": "вап",
+      "price": "01000",
+      "id": 2
+    }
+  ]
 }
