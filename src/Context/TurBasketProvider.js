@@ -3,8 +3,8 @@ import React, { createContext, useReducer } from "react";
 export const turBasket = createContext();
 
 function getCountTursBasket() {
-    let basket = JSON.parse(localStorage.getItem("basket"));
-  return basket ? basket.turs.length : 0;
+  let basket = JSON.parse(localStorage.getItem("basket"));
+  return basket ? basket.turs?.length : 0;
 }
 
 const INIT_STATE = {
@@ -42,12 +42,12 @@ const TurBasketProvider = ({ children }) => {
     };
 
     // Хранение дубликатов
-    let filterBasket = basket.turs.filter((elem) => {
+    let filterBasket = basket.turs.filter(elem => {
       return elem.item.id === turObj.id;
     });
 
     if (filterBasket.length > 0) {
-      basket.turs = basket.turs.filter((elem) => {
+      basket.turs = basket.turs.filter(elem => {
         return elem.item.id !== turObj.id;
       });
     } else {
@@ -78,7 +78,7 @@ const TurBasketProvider = ({ children }) => {
 
   function changeTurCount(id, count) {
     let basket = JSON.parse(localStorage.getItem("basket"));
-    basket.turs = basket.turs.map((elem) => {
+    basket.turs = basket.turs.map(elem => {
       if (elem.item.id === id) {
         elem.count = count;
         elem.subPrice = count * elem.item.price;
@@ -92,7 +92,7 @@ const TurBasketProvider = ({ children }) => {
 
   function calcTotalPrice(turs) {
     let total = 0;
-    turs.map((item) => {
+    turs.map(item => {
       total += item.subPrice;
     });
     return total;
@@ -102,7 +102,7 @@ const TurBasketProvider = ({ children }) => {
 
   function deleteBasketTur(id) {
     let basket = JSON.parse(localStorage.getItem("basket"));
-    basket.turs = basket.turs.filter((elem) => {
+    basket.turs = basket.turs.filter(elem => {
       return elem.item.id !== id;
     });
     basket.totalPrice = calcTotalPrice(basket.turs);
@@ -135,9 +135,7 @@ const TurBasketProvider = ({ children }) => {
     tursInBasket: state.basket,
     basketCount: state.basketCount,
   };
-  return (
-    <turBasket.Provider value={cloud}>{children}</turBasket.Provider>
-  );
+  return <turBasket.Provider value={cloud}>{children}</turBasket.Provider>;
 };
 
 export default TurBasketProvider;
